@@ -1,6 +1,6 @@
 def random_multiplication
-  factor1 = rand(1..11)
-  factor2 = rand(1..11)
+  factor1 = rand(2..10)
+  factor2 = rand(2..10)
   product = factor1 * factor2
   puts "#{factor1} * #{factor2} = #{product}"
 end
