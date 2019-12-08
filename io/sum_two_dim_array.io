@@ -1,0 +1,1 @@
+sum2 := method(twoDimArray, twoDimArray flatten reduce(+))
