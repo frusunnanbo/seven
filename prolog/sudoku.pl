@@ -52,7 +52,7 @@ sudoku(Input, Solution) :-
 	   Square1, Square2, Square3, Square4, Square5, Square6, Square7, Square8, Square9]).
 
 print_solution_counted([], _).
-print_solution_counted([Head|Tail], Count) :- #=(0, Count rem 9), format(' ~d~n', [Head]), print_solution_counted(Tail, Count + 1).
-print_solution_counted([Head|Tail], Count) :- format(' ~d', [Head]), print_solution_counted(Tail, Count + 1).
+print_solution_counted([Head|Tail], Count) :- #=(0, Count rem 9), format('  ~d~n', [Head]), print_solution_counted(Tail, Count + 1).
+print_solution_counted([Head|Tail], Count) :- format('  ~d', [Head]), print_solution_counted(Tail, Count + 1).
 
 print_solution(Solution) :- print_solution_counted(Solution, 1).
