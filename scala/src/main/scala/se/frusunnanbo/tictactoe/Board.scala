@@ -17,11 +17,16 @@ object Board {
   }
 
   private def scores(pieces: Pieces) = {
-    hasRow(pieces)
+    hasRow(pieces) || hasColumn(pieces)
   }
 
   private def hasRow(pieces: Pieces) = {
     val ((row1, _), (row2, _), (row3, _)) = pieces
     row1 == row2 && row2 == row3
+  }
+
+  private def hasColumn(pieces: Pieces) = {
+    val ((_, col1), (_, col2), (_, col3)) = pieces
+    col1 == col2 && col2 == col3
   }
 }

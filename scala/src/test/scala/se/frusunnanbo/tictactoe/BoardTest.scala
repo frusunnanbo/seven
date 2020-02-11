@@ -17,4 +17,8 @@ class BoardTest extends org.scalatest.flatspec.AnyFlatSpec with Matchers{
     Board.evaluate(((1, 1), (2, 2), (1, 3)), ((3, 1), (3, 2), (3, 3))) shouldBe OWins
   }
 
+  "(x - -, x o -, x o o)" should "be won by x" in {
+    Board.evaluate(((1, 1), (2, 1), (3, 1)), ((2, 2), (3, 2), (3, 3))) shouldBe XWins
+  }
+
 }
