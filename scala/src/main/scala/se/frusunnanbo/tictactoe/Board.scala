@@ -1,6 +1,6 @@
 package se.frusunnanbo.tictactoe
 
-import se.frusunnanbo.tictactoe.GameStatus.{NoWinnerYet, Tie, XWins}
+import se.frusunnanbo.tictactoe.GameStatus.{NoWinnerYet, OWins, Tie, XWins}
 
 object Board {
   type Pieces = ((Int, Int), (Int, Int), (Int, Int))
@@ -9,6 +9,8 @@ object Board {
       Tie
     } else if (scores(xPieces)) {
       XWins
+    } else if (scores(oPieces)) {
+      OWins
     } else {
       NoWinnerYet
     }
