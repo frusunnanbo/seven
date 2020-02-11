@@ -1,4 +1,10 @@
-Emacs temp and rescue files
+# Emacs temp and rescue files
 *~
 \#*
 .#*
+
+# IntelliJ
+.idea
+
+target/
+project/
