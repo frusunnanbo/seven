@@ -1,11 +1,7 @@
 module Sorting where
-  insert :: Integer -> [Integer] -> [Integer]
-  insert element [] = [element]
-  insert element (head:tail) = if element < head then element:head:tail else (head:(insert element tail))
+  insert :: [Integer] -> Integer -> [Integer]
+  insert [] element = [element]
+  insert (head:tail) element = if element < head then element:head:tail else (head:(insert tail element))
 
   sort :: [Integer] -> [Integer]
-  sort = sortAcc []
-
-  sortAcc :: [Integer] -> [Integer] -> [Integer]
-  sortAcc acc [] = acc
-  sortAcc acc (head:tail) = sortAcc (insert head acc) tail
+  sort = foldl insert []
